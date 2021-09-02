@@ -16,6 +16,7 @@
 
 html{
   font-size:62.5%;
+  scroll-behavior: smooth;
 
 }
 
@@ -24,11 +25,25 @@ body{
   overflow-x:hidden;
 }
 
+.container{
+  width:100%;
+  overflow-x:hidden;
+}
+
 .section-1{
   width:100%;
-  height:100%;
+  height:100vh;
   background-color:#fff;
   position:relative;
+}
+.section-heading {
+  font-size: 10rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999;
+  text-align: center;
+  opacity: 0.1;
+  text-shadow: 2rem 2rem 4rem #aaa;
 }
 
 .floating-bg{
@@ -40,6 +55,7 @@ body{
   left:calc(50% - 75vw);
   border-radius:45%;
   animation: rotate 30s infinite; 
+  
 }
 
 .floating-bg::before{
@@ -105,7 +121,7 @@ body{
   font-size:8rem;
   font-family:"Monoton",cursive;
   position:absolute;
-  top:19.5vw;
+  top:18vw;
   left:50%;
   transform:translateX(-50%);
   text-shadow:0.3rem 0.3rem 0.3rem #888;
@@ -122,7 +138,7 @@ body{
 
 .logo{
   position:absolute;
-  top:170%;
+  top:70%;
   left:50%;
   transform:translateX(-50%);
 }
@@ -132,4 +148,228 @@ body{
   font-size:15rem;
   color:rgba(50,231,255,0.8);
   text-shadow:.1rem .1rem .2rem #ddd, -.1rem -1rem 0.2rem  #ddd;
+}
+
+
+
+/* section 2 */
+
+.section-2{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+}
+
+.section-heading{
+  font-size:10rem;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#999;
+  text-align:center;
+  opacity:.1;
+  text-shadow:2rem 2rem 4rem #aaa;
+}
+
+/* cards */
+.customers-wrapper{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  height:70%;
+}
+
+.customer{
+  width:35rem;
+  height:50rem;
+  background-color:#eee;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  border-radius:.5rem;
+  padding:2rem;
+  box-shadow:1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+  transition: box-shadow 0.5s;
+}
+
+ .customer:first-child{
+   align-self:flex-end;
+
+ }
+
+
+ .customer:last-child{
+  align-self:flex-start;
+
+}
+.fa-quote-left{
+  font-size:4rem;
+  color:#f08e0f;
+}
+
+
+.customer-text{
+  font-size:1.2rem;
+  margin:2.5rem 0;
+  text-align:justify;
+}
+
+
+.customer-text::first-letter{
+  margin-left:1rem;
+}
+
+.customer-rating i{
+  font-size:2rem;
+  color:#f08e0f;
+}
+
+.customer:hover{
+  box-shadow:2rem 2rem 3rem #ddd,
+  -2rem -2rem 3rem #eee;
+  
+}
+
+
+.customer-img{
+  width:10rem;
+  height:10rem;
+  object-fit:cover;
+  margin:2rem 0;
+  border-radius:50%;
+}
+
+.customer-name{
+  font-size:2rem;
+  font-weight:700;
+}
+
+/* 
+section 3 beginning
+*/
+
+.section-3{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  padding:5rem 0;
+}
+
+
+.team-wrapper{
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  height:70%;
+}
+
+.team-member{
+  width:35rem;
+  background-color:#eee;
+  padding:1rem 1rem 2rem 1rem;
+  box-shadow:1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
+  position:relative;
+}
+
+.team-member-name{
+  font-size:2.3rem;
+  font-weight:700rem;
+  color:#696717;
+  margin-top:2rem;
+  
+}
+
+.team-member-name span{
+  font-size:1.7rem;
+}
+
+.team-member-skills{
+  display:flex;
+  justify-content:space-between;
+  margin:1rem 0 2rem 0;
+}
+
+.team-member-skills li{
+  font-size:1.5rem;
+  color:#505050;
+
+}
+
+.projects-btn{
+  background-color:#fab34a;
+  color:#fff;
+  padding:.5rem 1.5rem;
+  border-radius:5rem;
+  font-size: 1.5rem;
+  letter-spacing:0.2rem;
+}
+
+.story{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-color: rgba(253,69,69,0.9);
+  padding:2rem;
+  transform:scale(0);
+  transition:all 0.5s;
+}
+
+
+.story-btn{
+  width:4rem;
+  height:4rem;
+  background:#222;
+  position:absolute;
+  top:-1rem;
+  right:-1rem;
+  border-radius:5rem;
+  display:flex;
+  align-items:center;
+  padding:0.5rem;
+  cursor:pointer;
+  z-index:50;
+  transition:transform 0.5s;
+}
+
+
+
+
+.story-btn-line{
+  width:100%;
+  height:0.1rem;
+  background-color:#fff;
+}
+
+
+.story-heading{
+  font-size:4rem;
+  font-weight:700;
+  color:white;
+  margin-bottom:2rem;
+}
+
+.story-paragraph{
+  font-size:1.8rem;
+  color:#eee;
+  text-align:justify;
+  letter-spacing:0.1rem;
+  text-indent:2rem;
+
+}
+
+.change.story-btn{
+  transform:rotate(405deg);
+}
+
+.change.story{
+  transform:scale(1);
 }
