@@ -1,4 +1,4 @@
-import React from 'react';
+import React  ,{useState} from 'react';
 import image1 from '../images/team-member-1.jpg'
 import image2 from '../images/team-member-2.jpg'
 import image3 from '../images/team-member-3.jpg'
@@ -8,6 +8,9 @@ import image3 from '../images/team-member-3.jpg'
 const Team = () => {
 
 
+      const [change,setToggleChange] = useState(false);
+      const [change2,setToggleChange2] = useState(false);
+      const [change3,setToggleChange3] = useState(false);
 
    
 
@@ -30,10 +33,10 @@ const Team = () => {
               <a href="#" className="projects-btn">
                   Projects
               </a>
-              <div className="story-btn" title="My Story">
-                  <div className="story-btn-line"></div>
+              <div className={change ? "story-btn change ": 'story-btn'} title="My Story">
+                  <button onClick={() => setToggleChange(!change)} className="story-btn-line"></button>
               </div>
-             <div className="story">
+             <div className={change ? 'story change' : 'story'}>
                  <h4 className="story-heading">About Me</h4>
                   <p className="story-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a auctor tortor. Sed lacinia venenatis odio, eu venenatis est. Nam dictum vulputate maximus. Nunc ac eleifend nibh. Integer congue non felis quis pretium. Morbi porttitor, augue id ornare iaculis, sapien.</p>
              </div>
@@ -54,10 +57,10 @@ const Team = () => {
               <a href="#" className="projects-btn">
                   Projects
               </a>
-              <div className="story-btn" title="My Story">
-                  <div className="story-btn-line"></div>
+              <div className={change2 ? "story-btn change ": 'story-btn'} title="My Story">
+                  <button  onClick={() => setToggleChange2(!change2)} className="story-btn-line"></button>
               </div>
-             <div className="story">
+             <div className={change2  ? 'change story' : 'story'}>
                  <h4 className="story-heading">About Me</h4>
                   <p className="story-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a auctor tortor. Sed lacinia venenatis odio, eu venenatis est. Nam dictum vulputate maximus. Nunc ac eleifend nibh. Integer congue non felis quis pretium. Morbi porttitor, augue id ornare iaculis, sapien.</p>
              </div>
@@ -79,10 +82,10 @@ const Team = () => {
               <a href="#" className="projects-btn">
                   Projects
               </a>
-              <div className=" story-btn" title="My Story">
-                  <div className="change story-btn-line"></div>
+              <div className={change3 ? "story-btn change ": 'story-btn'} title="My Story">
+                  <button  onClick={() => setToggleChange3(!change3) }className="story-btn-line"></button>
               </div>
-             <div className="story">
+             <div className={change3 ? 'story change':'story'}>
                  <h4 className="story-heading">About Me</h4>
                   <p className="story-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a auctor tortor. Sed lacinia venenatis odio, eu venenatis est. Nam dictum vulputate maximus. Nunc ac eleifend nibh. Integer congue non felis quis pretium. Morbi porttitor, augue id ornare iaculis, sapien.</p>
              </div>

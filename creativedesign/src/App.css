@@ -21,9 +21,6 @@ html{
 }
 
 
-body{
-  overflow-x:hidden;
-}
 
 .container{
   width:100%;
@@ -254,7 +251,7 @@ section 3 beginning
   height:100vh;
   display:flex;
   flex-direction:column;
-  justify-content:space-around;
+  justify-content:space-between;
   padding:5rem 0;
 }
 
@@ -268,10 +265,12 @@ section 3 beginning
 
 .team-member{
   width:35rem;
-  background-color:#eee;
+  background-color:#fffeee;
   padding:1rem 1rem 2rem 1rem;
   box-shadow:1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
   position:relative;
+  opacity:0.7;
+  transition:opacity .5s;
 }
 
 .team-member-name{
@@ -320,6 +319,8 @@ section 3 beginning
   background-color: rgba(253,69,69,0.9);
   padding:2rem;
   transform:scale(0);
+  transform-origin:top right;
+  border-radius:50rem 0 50rem 50rem;
   transition:all 0.5s;
 }
 
@@ -372,4 +373,21 @@ section 3 beginning
 
 .change.story{
   transform:scale(1);
+  border-radius:0;
+}
+
+
+.team-member:first-child{
+  align-self:flex-start;
+}
+
+.team-member:last-child{
+  align-self:flex-end
+}
+
+
+.team-member:hover{
+
+  opacity:1;
+
 }
