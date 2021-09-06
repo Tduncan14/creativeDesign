@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../images/form-img-png';
+import Form from '../images/form-img.png';
 
 
 
@@ -19,7 +19,7 @@ const Content = () => {
 
             <div class="form-container">
                 <img src={Form}  className=
-                "form-png"/>
+                "form-img"/>
 
 
                 <form className="contact-form">
